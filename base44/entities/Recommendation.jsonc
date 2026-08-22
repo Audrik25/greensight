@@ -1,0 +1,71 @@
+{
+  "name": "Recommendation",
+  "type": "object",
+  "properties": {
+    "detection_id": {
+      "type": "string",
+      "title": "Detection ID"
+    },
+    "scan_id": {
+      "type": "string",
+      "title": "Scan ID"
+    },
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "recommendation": {
+      "type": "string",
+      "title": "Recommendation"
+    },
+    "priority": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "urgent"
+      ],
+      "default": "medium"
+    },
+    "action_type": {
+      "type": "string",
+      "enum": [
+        "targeted_treatment",
+        "monitor",
+        "irrigate",
+        "fertilize",
+        "apply_fungicide",
+        "apply_herbicide",
+        "apply_pesticide",
+        "improve_drainage",
+        "remove_plants"
+      ],
+      "title": "Action Type"
+    },
+    "action_label": {
+      "type": "string",
+      "title": "Action Label"
+    },
+    "reason": {
+      "type": "string",
+      "title": "Reason"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "immediate",
+        "action"
+      ],
+      "title": "Category"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "recommendation"
+  ]
+}

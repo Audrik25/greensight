@@ -1,0 +1,209 @@
+{
+  "name": "Scan",
+  "type": "object",
+  "properties": {
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "field_name": {
+      "type": "string",
+      "title": "Field Name"
+    },
+    "crop": {
+      "type": "string",
+      "title": "Crop Type"
+    },
+    "crop_image": {
+      "type": "string",
+      "format": "uri",
+      "title": "Crop Image URL"
+    },
+    "soil_image": {
+      "type": "string",
+      "format": "uri",
+      "title": "Soil Image URL"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "analyzing",
+        "completed",
+        "failed"
+      ],
+      "default": "pending"
+    },
+    "health_score": {
+      "type": "number",
+      "title": "Overall Health Score",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "health_status": {
+      "type": "string",
+      "enum": [
+        "EXCELLENT",
+        "GOOD",
+        "MODERATE",
+        "POOR",
+        "CRITICAL"
+      ],
+      "title": "Health Status"
+    },
+    "capture_timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Capture Timestamp"
+    },
+    "capture_mode": {
+      "type": "string",
+      "enum": [
+        "day",
+        "night"
+      ],
+      "title": "Capture Mode"
+    },
+    "color_health": {
+      "type": "number",
+      "title": "Color Health",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "density": {
+      "type": "number",
+      "title": "Density",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "growth": {
+      "type": "number",
+      "title": "Growth",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "stress": {
+      "type": "number",
+      "title": "Stress",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "affected_area_percent": {
+      "type": "number",
+      "title": "Affected Area %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "soil_visual_type": {
+      "type": "string",
+      "title": "Soil Visual Type"
+    },
+    "soil_moisture": {
+      "type": "string",
+      "title": "Soil Moisture"
+    },
+    "soil_drainage_risk": {
+      "type": "string",
+      "title": "Soil Drainage Risk"
+    },
+    "soil_confidence": {
+      "type": "number",
+      "title": "Soil Analysis Confidence",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "soil_surface_moisture": {
+      "type": "string",
+      "title": "Surface Moisture"
+    },
+    "soil_apparent_compaction": {
+      "type": "string",
+      "title": "Apparent Compaction"
+    },
+    "soil_apparent_drainage": {
+      "type": "string",
+      "title": "Apparent Drainage"
+    },
+    "overall_risk": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MODERATE",
+        "HIGH",
+        "CRITICAL"
+      ],
+      "title": "Overall Risk"
+    },
+    "risks": {
+      "type": "array",
+      "title": "Risks",
+      "items": {
+        "type": "object",
+        "properties": {
+          "type": {
+            "type": "string"
+          },
+          "level": {
+            "type": "string"
+          },
+          "confidence": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "risk_factors": {
+      "type": "array",
+      "title": "Risk Factors",
+      "items": {
+        "type": "string"
+      }
+    },
+    "environmental_score": {
+      "type": "number",
+      "title": "Environmental Score",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "treatment_area_reduction_percent": {
+      "type": "number",
+      "title": "Treatment Area Reduction %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "chemical_use_reduction_percent": {
+      "type": "number",
+      "title": "Chemical Use Reduction %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "water_use_status": {
+      "type": "string",
+      "title": "Water Use Status"
+    },
+    "environmental_explanation": {
+      "type": "string",
+      "title": "Environmental Explanation"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Analysis Summary"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "manual",
+        "raspberry_pi"
+      ],
+      "default": "manual"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "field_id"
+  ]
+}

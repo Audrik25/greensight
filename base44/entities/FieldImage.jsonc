@@ -1,0 +1,57 @@
+{
+  "name": "FieldImage",
+  "type": "object",
+  "properties": {
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "field_name": {
+      "type": "string",
+      "title": "Field Name"
+    },
+    "image_url": {
+      "type": "string",
+      "format": "uri",
+      "title": "Image URL"
+    },
+    "capture_type": {
+      "type": "string",
+      "enum": [
+        "crop",
+        "soil",
+        "auto"
+      ],
+      "default": "auto",
+      "title": "Capture Type"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "raspberry_pi",
+        "manual",
+        "demo"
+      ],
+      "default": "demo",
+      "title": "Source"
+    },
+    "camera_id": {
+      "type": "string",
+      "title": "Camera ID"
+    },
+    "captured_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Captured At"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "field_id",
+    "image_url"
+  ]
+}

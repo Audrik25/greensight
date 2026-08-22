@@ -1,0 +1,103 @@
+{
+  "name": "WeeklyReport",
+  "type": "object",
+  "properties": {
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "scan_id": {
+      "type": "string",
+      "title": "Scan ID"
+    },
+    "period_start": {
+      "type": "string",
+      "format": "date",
+      "title": "Period Start"
+    },
+    "period_end": {
+      "type": "string",
+      "format": "date",
+      "title": "Period End"
+    },
+    "predicted_health_score": {
+      "type": "number",
+      "title": "Predicted Health Score",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "predicted_health_status": {
+      "type": "string",
+      "enum": [
+        "EXCELLENT",
+        "GOOD",
+        "MODERATE",
+        "POOR",
+        "CRITICAL"
+      ],
+      "title": "Predicted Health Status"
+    },
+    "trend": {
+      "type": "string",
+      "enum": [
+        "IMPROVING",
+        "STABLE",
+        "SLIGHT_DECLINE",
+        "DECLINING"
+      ],
+      "title": "Trend"
+    },
+    "summary": {
+      "type": "string",
+      "title": "Summary"
+    },
+    "future_risks": {
+      "type": "array",
+      "title": "Future Risks",
+      "items": {
+        "type": "object",
+        "properties": {
+          "risk": {
+            "type": "string"
+          },
+          "probability": {
+            "type": "number"
+          },
+          "reason": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "weekly_advice": {
+      "type": "array",
+      "title": "Weekly Advice",
+      "items": {
+        "type": "string"
+      }
+    },
+    "recommended_actions": {
+      "type": "array",
+      "title": "Recommended Actions",
+      "items": {
+        "type": "object",
+        "properties": {
+          "day": {
+            "type": "string"
+          },
+          "action": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "field_id"
+  ]
+}

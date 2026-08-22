@@ -1,0 +1,23 @@
+{
+  "name": "HealthSnapshot",
+  "type": "object",
+  "properties": {
+    "farm_health_score": {
+      "type": "number",
+      "title": "Farm Health Score",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "field_count": {
+      "type": "number",
+      "title": "Field Count"
+    },
+    "alert_count": {
+      "type": "number",
+      "title": "Alert Count"
+    }
+  },
+  "required": [
+    "farm_health_score"
+  ]
+}

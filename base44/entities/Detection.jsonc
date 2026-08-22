@@ -1,0 +1,86 @@
+{
+  "name": "Detection",
+  "type": "object",
+  "properties": {
+    "scan_id": {
+      "type": "string",
+      "title": "Scan ID"
+    },
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "disease",
+        "weed",
+        "soil_condition",
+        "pest",
+        "water_stress",
+        "nutrient_deficiency"
+      ],
+      "title": "Detection Type"
+    },
+    "label": {
+      "type": "string",
+      "title": "Detection Label"
+    },
+    "confidence": {
+      "type": "number",
+      "title": "Confidence %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ],
+      "default": "low"
+    },
+    "affected_area": {
+      "type": "number",
+      "title": "Affected Area %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "zone": {
+      "type": "string",
+      "title": "Zone Location"
+    },
+    "description": {
+      "type": "string",
+      "title": "Description"
+    },
+    "x": {
+      "type": "number",
+      "title": "X Position"
+    },
+    "y": {
+      "type": "number",
+      "title": "Y Position"
+    },
+    "width": {
+      "type": "number",
+      "title": "Width"
+    },
+    "height": {
+      "type": "number",
+      "title": "Height"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "scan_id",
+    "type",
+    "label"
+  ]
+}

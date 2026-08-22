@@ -1,0 +1,41 @@
+{
+  "name": "CameraConfig",
+  "type": "object",
+  "properties": {
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "field_name": {
+      "type": "string",
+      "title": "Field Name"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "connected",
+        "disconnected"
+      ],
+      "default": "connected",
+      "title": "Status"
+    },
+    "capture_interval_minutes": {
+      "type": "number",
+      "default": 60,
+      "title": "Capture Interval (minutes)"
+    },
+    "last_capture_at": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Last Capture At"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "field_id"
+  ]
+}

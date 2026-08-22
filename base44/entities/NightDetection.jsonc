@@ -1,0 +1,67 @@
+{
+  "name": "NightDetection",
+  "type": "object",
+  "properties": {
+    "scan_id": {
+      "type": "string",
+      "title": "Scan ID"
+    },
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "timestamp": {
+      "type": "string",
+      "format": "date-time",
+      "title": "Detection Timestamp"
+    },
+    "type": {
+      "type": "string",
+      "title": "Detection Type"
+    },
+    "species": {
+      "type": "string",
+      "title": "Species"
+    },
+    "confidence": {
+      "type": "number",
+      "title": "Confidence",
+      "minimum": 0,
+      "maximum": 1
+    },
+    "x": {
+      "type": "number",
+      "title": "X Position"
+    },
+    "y": {
+      "type": "number",
+      "title": "Y Position"
+    },
+    "width": {
+      "type": "number",
+      "title": "Width"
+    },
+    "height": {
+      "type": "number",
+      "title": "Height"
+    },
+    "potential_crop_threat": {
+      "type": "boolean",
+      "title": "Potential Crop Threat"
+    },
+    "motion_duration_seconds": {
+      "type": "number",
+      "title": "Motion Duration (seconds)"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "scan_id",
+    "field_id",
+    "type"
+  ]
+}

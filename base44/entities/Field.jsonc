@@ -1,0 +1,89 @@
+{
+  "name": "Field",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "title": "Field Name",
+      "minLength": 1
+    },
+    "crop": {
+      "type": "string",
+      "title": "Crop Type"
+    },
+    "grass_type": {
+      "type": "string",
+      "title": "Grass Type"
+    },
+    "size": {
+      "type": "number",
+      "title": "Field Size",
+      "minimum": 0
+    },
+    "size_unit": {
+      "type": "string",
+      "enum": [
+        "acres",
+        "hectares"
+      ],
+      "default": "acres"
+    },
+    "area_acres": {
+      "type": "number",
+      "title": "Area (acres)",
+      "minimum": 0
+    },
+    "latitude": {
+      "type": "number",
+      "title": "Latitude"
+    },
+    "longitude": {
+      "type": "number",
+      "title": "Longitude"
+    },
+    "elevation_m": {
+      "type": "number",
+      "title": "Elevation (m)"
+    },
+    "health_score": {
+      "type": "number",
+      "title": "Health Score",
+      "minimum": 0,
+      "maximum": 100,
+      "default": 100
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "healthy",
+        "monitor",
+        "action_needed",
+        "critical"
+      ],
+      "default": "healthy"
+    },
+    "planting_date": {
+      "type": "string",
+      "format": "date",
+      "title": "Planting Date"
+    },
+    "growth_stage": {
+      "type": "string",
+      "title": "Growth Stage"
+    },
+    "image_url": {
+      "type": "string",
+      "format": "uri",
+      "title": "Field Image"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "name",
+    "crop"
+  ]
+}

@@ -1,0 +1,120 @@
+{
+  "name": "EnvironmentalData",
+  "type": "object",
+  "properties": {
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "temperature": {
+      "type": "number",
+      "title": "Temperature (\u00b0C)"
+    },
+    "humidity": {
+      "type": "number",
+      "title": "Humidity %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "precipitation": {
+      "type": "number",
+      "title": "Precipitation (mm)"
+    },
+    "wind_speed": {
+      "type": "number",
+      "title": "Wind Speed (km/h)"
+    },
+    "wind_direction": {
+      "type": "string",
+      "title": "Wind Direction"
+    },
+    "conditions": {
+      "type": "string",
+      "title": "Conditions"
+    },
+    "rain_probability_percent": {
+      "type": "number",
+      "title": "Rain Probability %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "forecast_precipitation_mm": {
+      "type": "number",
+      "title": "Forecast Precipitation (mm)"
+    },
+    "forecast_humidity_percent": {
+      "type": "number",
+      "title": "Forecast Humidity %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "dew_point_c": {
+      "type": "number",
+      "title": "Dew Point (\u00b0C)"
+    },
+    "forecast_wind_speed_kmh": {
+      "type": "number",
+      "title": "Forecast Wind Speed (km/h)"
+    },
+    "wind_gusts_kmh": {
+      "type": "number",
+      "title": "Wind Gusts (km/h)"
+    },
+    "cloud_cover_percent": {
+      "type": "number",
+      "title": "Cloud Cover %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "leaf_wetness_probability_percent": {
+      "type": "number",
+      "title": "Leaf Wetness Probability %",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "growing_degree_days": {
+      "type": "number",
+      "title": "Growing Degree Days"
+    },
+    "et0_evapotranspiration_mm": {
+      "type": "number",
+      "title": "ET0 Evapotranspiration (mm)"
+    },
+    "soil_temperature_0cm_c": {
+      "type": "number",
+      "title": "Soil Temperature 0cm (\u00b0C)"
+    },
+    "soil_temperature_6cm_c": {
+      "type": "number",
+      "title": "Soil Temperature 6cm (\u00b0C)"
+    },
+    "soil_moisture_0_to_1cm": {
+      "type": "number",
+      "title": "Soil Moisture 0-1cm"
+    },
+    "soil_moisture_3_to_9cm": {
+      "type": "number",
+      "title": "Soil Moisture 3-9cm"
+    },
+    "soil_moisture_9_to_27cm": {
+      "type": "number",
+      "title": "Soil Moisture 9-27cm"
+    },
+    "source": {
+      "type": "string",
+      "enum": [
+        "demo",
+        "api"
+      ],
+      "default": "demo"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "field_id"
+  ]
+}

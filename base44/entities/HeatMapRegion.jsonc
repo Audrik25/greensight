@@ -1,0 +1,55 @@
+{
+  "name": "HeatMapRegion",
+  "type": "object",
+  "properties": {
+    "scan_id": {
+      "type": "string",
+      "title": "Scan ID"
+    },
+    "field_id": {
+      "type": "string",
+      "title": "Field ID"
+    },
+    "x": {
+      "type": "number",
+      "title": "X Position"
+    },
+    "y": {
+      "type": "number",
+      "title": "Y Position"
+    },
+    "width": {
+      "type": "number",
+      "title": "Width"
+    },
+    "height": {
+      "type": "number",
+      "title": "Height"
+    },
+    "health_score": {
+      "type": "number",
+      "title": "Health Score",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "LOW",
+        "MODERATE",
+        "HIGH",
+        "CRITICAL"
+      ],
+      "title": "Risk Level"
+    },
+    "is_demo": {
+      "type": "boolean",
+      "default": false,
+      "title": "Is Demo Data"
+    }
+  },
+  "required": [
+    "scan_id",
+    "field_id"
+  ]
+}
